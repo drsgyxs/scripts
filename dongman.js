@@ -19,13 +19,13 @@ var obj = JSON.parse(body);
 const episodeInfo = '/app/episode/info';
 const wallet = '/app/wallet/list';
 
-if (url.includes(episodeInfo)) {
-  console.log(url, obj);
-  // body.message.result.episodeInfo.free = true;
-  // obj?.message?.result?.episodeInfo?.account?.firstPay = false;
-  // obj?.message?.result?.episodeInfo?.account?.account = 666;
-  // obj?.message?.result?.episodeInfo?.account?.bean = 666;
-  // obj?.message?.result?.episodeInfo?.isPurchased = true;
+if (url.includes(episodeInfo) && obj.message.result.episodeInfo) {
+  obj.message.result.episodeInfo.isPurchased = true;
+  if (body.message.result.episodeInfo.account) {
+    obj.message.result.episodeInfo.account.firstPay = false;
+    obj.message.result.episodeInfo.account.account = 666;
+    obj.message.result.episodeInfo.account.bean = 666;
+  }
 } else if (url.includes(wallet)) {
   obj.message.result.account.firstPay = false;
   obj.message.result.account.account = 666;
