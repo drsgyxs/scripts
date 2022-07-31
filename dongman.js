@@ -4,7 +4,7 @@
 QuantumultX:
 
 [rewrite_local]
-^https:\/\/apis\.dongmanmanhua\.cn\/app\/episode\/info\/v4\/ url script-response-body https://raw.githubusercontent.com/drsgyxs/scripts/main/dongman.js
+^https:\/\/apis\.dongmanmanhua\.cn\/app\/episode\/info\/v4 url script-response-body https://raw.githubusercontent.com/drsgyxs/scripts/main/dongman.js
 ^https:\/\/pay\.dongmanmanhua\.cn\/app\/wallet\/list\/v2 url script-response-body https://raw.githubusercontent.com/drsgyxs/scripts/main/dongman.js
 
 [mitm]
