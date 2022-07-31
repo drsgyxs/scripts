@@ -1,10 +1,10 @@
 for (const key in $request) {
-  console.log(key, $request[key]);
+  console.log(key + ': ' + $request[key]);
 }
 
 if ($response) {
   for (const key in $response) {
-    console.log(key, $response[key]);
+    console.log(key + ': ' + $response[key]);
   }
 }
 
