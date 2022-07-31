@@ -21,7 +21,7 @@ const wallet = '/app/wallet/list';
 
 if (url.includes(episodeInfo) && obj.message.result.episodeInfo) {
   obj.message.result.episodeInfo.isPurchased = true;
-  if (body.message.result.episodeInfo.account) {
+  if (obj.message.result.episodeInfo.account) {
     obj.message.result.episodeInfo.account.firstPay = false;
     obj.message.result.episodeInfo.account.account = 666;
     obj.message.result.episodeInfo.account.bean = 666;
